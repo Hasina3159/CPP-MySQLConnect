@@ -136,7 +136,7 @@ sql::ResultSet* _execute(const std::string& query, std::initializer_list<std::st
    DB_DELETE)`.
 
 *Retourne*: 
- - Un pointeur vers `cpp sql::ResultSet` si type est `DB_READ`, sinon
+ - Un pointeur vers `sql::ResultSet` si type est `DB_READ`, sinon
    `nullptr`.
 
 *Exemple*:
