@@ -105,7 +105,7 @@ dbConnect._update("tasks", {"title", "description"}, {"Updated Title", "Updated 
 Supprime des données d'une table.
 
 ```cpp
-bool _delete(const std::string& table, const std::string& condition);
+bool _delete(const std::string& table, const std::string& condition, std::initializer_list<std::string> values_lst);
 ```
 *Paramètres*:
 
@@ -119,7 +119,8 @@ bool _delete(const std::string& table, const std::string& condition);
 
 *Exemple*:
 ```cpp
-dbConnect._delete("tasks", "id = 1");
+dbConnect._delete("tasks", "title = ? AND due_date = ?", {"Task 1", "2024-12-31"});
+
 ```
 ## _execute
 Exécute une requête SQL avec des paramètres.
